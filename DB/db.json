@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "test",
-      "email": "test",
-      "password": "test"
-    },
-    {
       "id": "9adb1357-a84f-4172-8922-0df2005b837d",
       "email": "tharunravi98@gmail.com",
       "password": "12345",
@@ -18,13 +12,49 @@
   ],
   "products": [
     {
-      "id": "823f1d4b-54cb-486c-ae90-90af76f13592",
+      "id": "148eb0b4-b9eb-4cfd-ac69-9f16f60d37b8",
+      "productName": "Zebronics USB Pendrive",
+      "productDescription": "Zebronics USB Pendrive",
+      "manufacturer": "Zebronics Inc",
+      "price": 699,
+      "quantity": 40,
+      "visit": 0
+    },
+    {
+      "id": "7cbd2142-a68f-4196-9e8a-113aeb8cbb58",
+      "productName": "Dell USB Wireless Mouse",
+      "productDescription": "Dell USB Wireless Mouse",
+      "manufacturer": "Dell Inc",
+      "price": 1199,
+      "quantity": 97,
+      "visit": 3
+    },
+    {
+      "id": "08185cfd-993b-438c-919a-ddad68074c23",
+      "productName": "ITC Notebooks",
+      "productDescription": "ITC Notebooks",
+      "manufacturer": "ITC",
+      "price": 85,
+      "quantity": 125,
+      "visit": 4
+    },
+    {
+      "id": "7bf7dba7-1fa6-440e-99eb-dfccdfd6bfcd",
+      "productName": "Casio Calculator",
+      "productDescription": "Casio Calculator",
+      "manufacturer": "Casio Inc",
+      "price": 1698,
+      "quantity": 55,
+      "visit": 4
+    },
+    {
+      "id": "a87f2d6d-4fc3-4971-a852-d142922408bb",
       "productName": "HP Laptop",
-      "productDescription": "HP Description",
+      "productDescription": "HP Laptop",
       "manufacturer": "HP Inc",
-      "price": 14999,
-      "quantity": 5,
-      "visit": 2
+      "price": 34999,
+      "quantity": 21,
+      "visit": 0
     }
   ]
 }
