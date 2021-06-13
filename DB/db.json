@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "test",
+      "email": "test",
+      "password": "test"
+    },
+    {
+      "id": "9adb1357-a84f-4172-8922-0df2005b837d",
+      "email": "tharunravi98@gmail.com",
+      "password": "12345",
+      "firstName": "Tharun",
+      "lastName": "Ravi",
+      "location": "Chennai",
+      "mobileNumber": "9444472216"
+    }
+  ],
+  "products": [
+    {
+      "id": "823f1d4b-54cb-486c-ae90-90af76f13592",
+      "productName": "HP Laptop",
+      "productDescription": "HP Description",
+      "manufacturer": "HP Inc",
+      "price": 14999,
+      "quantity": 5,
+      "visit": 2
+    }
+  ]
+}
