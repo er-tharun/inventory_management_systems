@@ -1,0 +1,171 @@
+<!--
+<br>
+<div class="container">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div class="card border-info mb-3">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12"></div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        Product Details
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12"></div>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Product Name
+                    </div>
+                    <div class="col-4"> 
+                        {{productName}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Product Description
+                    </div>
+                    <div class="col-4">
+                        {{productDescription}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>        
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Manufacturer
+                    </div>
+                    <div class="col-4">
+                        {{manufacturer}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Quantity
+                    </div>
+                    <div class="col-4">
+                        {{quantity}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Price
+                    </div>
+                    <div class="col-4">
+                        {{price}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-4">
+                        Visits
+                    </div>
+                    <div class="col-4">
+                        {{visit}}
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+    </div>
+    <div class="col-3"></div>
+</div>-->
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4" id="title">
+            <h2>Product Details</h2>
+            <br>
+            <button class="btn btn-primary" (click)="goBack()">Go Back</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>>
+<div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body" id="text_col">
+                <div class="card-text">
+                    Product Name
+                    <hr>
+                </div>
+                <div class="card-text">
+                    Product Description
+                    <hr>
+                </div>
+                <div class="card-text">
+                    Manufacturer
+                    <hr>
+                </div>
+                <div class="card-text">
+                    Quantity
+                    <hr>
+                </div>
+                <div class="card-text">
+                    Price
+                    <hr>
+                </div>
+                <div class="card-text">
+                    Visits
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    {{productName}}
+                    <hr>
+                </div>
+                <div class="card-text">
+                    {{productDescription}}
+                    <hr>
+                </div>
+                <div class="card-text">
+                    {{manufacturer}}
+                    <hr>
+                </div>
+                <div class="card-text">
+                    {{quantity}}
+                    <hr>
+                </div>
+                <div class="card-text">
+                    {{price}}
+                    <hr>
+                </div>
+                <div class="card-text">
+                    {{visit}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+
+

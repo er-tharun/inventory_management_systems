@@ -1,0 +1,57 @@
+<div class="alert alert-danger" role="alert" *ngIf="loginFailed == true">
+  Login Falied
+</div>
+<div class="alert alert-success" role="alert" *ngIf="loginSucceed == true">
+  Login Successful
+</div>
+
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+
+          <button class="btn btn-success" routerLink="register">Click here to Register</button>
+            <form #loginForm="ngForm" (ngSubmit)=onSubmit(loginForm)>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  name="emailId" [(ngModel)]="emailId" #email="ngModel"
+                  [ngClass]="{ 'is-invalid': loginForm.submitted && email.invalid}" required>
+                  <div *ngIf="loginForm.submitted && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <label for="InputPassword" class="form-label">Password</label>
+                  <input type="password" required class="form-control" id="InputPassword" aria-describedby="passwordHelp"
+                  name="passWord" [(ngModel)]="password" #pass="ngModel"
+                  [ngClass]="{ 'is-invalid': loginForm.submitted && pass.invalid }"  required>
+                  <div *ngIf="loginForm.submitted && pass.invalid " class="invalid-feedback">
+                    <div *ngIf="pass.errors.required">Password is required</div>
+                </div>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button> 
+                <button type="button" class="btn btn-danger" (click)="logOut()">LogOut</button>
+              </form>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+      <!--<div class="col-2"></div>
+      <div class="col-8">-->
+        <!--<button type="submit" class="btn btn-light" (Click)="goBack()">Go Back</button>-->
+        
+      <!--</div>
+      <div class="col-2"></div>-->
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

@@ -1,0 +1,88 @@
+a.active {
+    color: red;
+    font: bold;
+}
+
+a {
+    padding-right: 20px;
+}
+
+.navbar-brand, .nav-link, .nav-item{
+    color: azure;
+    font-size: large;
+}
+
+#navItem, #navItem_about, #navItem_productSummary  {
+    color: azure;
+    font-size: bold;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {
+    height: 450px
+  }
+
+  /* Set black background color, white text and some padding */
+  footer {
+    padding: 15px;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+
+    .row.content {
+      height: auto;
+    }
+  }
+
+  #theme {
+    background-color: rgb(13, 155, 155);
+  }
+
+  #fontColor {
+    color: white;
+  }
+
+  .text-large {
+    font-size: 20px;
+  }
+
+  /* icon formatting*/
+  .icon {
+    font-size:48px;
+    color:rgb(13, 155, 155)
+  }
+
+  html {
+    height: 100%;
+  }
+  html body {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  html body .container-fluid.body-content {
+    width: 100%;
+    overflow-y: auto;
+  }
+  header {
+      background-color: #4C4;
+      min-height: 50px;
+      width: 100%;
+  }
+  footer {
+      background-color: #4C4;
+      min-height: 30px;
+      width: 100%;
+  }

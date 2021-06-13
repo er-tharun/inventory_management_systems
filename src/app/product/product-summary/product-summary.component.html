@@ -1,0 +1,85 @@
+<br>
+<div class="text-center">
+    <div class="button-group">
+        <button type="button" id="addButton" class="btn btn-primary" (click)="addProductData()">Add Product</button>
+        <button type="button" id="editButton" class="btn btn-success" (click)="editProductData(products)">Edit Product</button>
+        <button type="button" id="deleteButton" class=" btn btn-danger" (click)="deleteProductData(products)">Delete Product</button>
+        <button type="button" id="mostViewed" class="btn btn-dark" (click)="linkToMostVisitedProducts()">Click to View Most Visited Products</button>
+    </div>
+</div>
+
+<br>
+<div class="text-center">
+    <label id="search_title">Enter the Product Name to Search</label>
+    <input type="text" [(ngModel)]="Filter">
+</div>
+<!--dropbox starts-->
+<label class="checkbox-inline"><input type="checkbox" checked value="" id="chkname" (change)="changechkName()">Product Name</label>
+<label class="checkbox-inline"><input type="checkbox" checked value="" id="chkdescription" (change)="changechkdescription()">Description</label>
+<label class="checkbox-inline"><input type="checkbox" checked value="" id="chkmanufacturer" (change)="changechkmanufacturer()">Manufacturer</label>
+<label class="checkbox-inline"><input type="checkbox" checked value="" id="chkprice" (change)="changechkprice()">Price</label>
+<label class="checkbox-inline"><input type="checkbox" checked value="" id="chkquantity" (change)="changechkquantity()">Quantity</label>
+<!--dropbox ends-->
+<br>
+<div class="text-center">
+    <div class="alert alert-danger" id="editAlert" role="alert" *ngIf="isEditErrorMessage == true">
+        Invalid Operation : Please select only one checkbox to Perform Edit Operation
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+    <div class="alert alert-danger" id="deleteAlert" role="alert" *ngIf="isDeleteErrorMessage == true">
+        Invalid Operation Please select atleast one checkbox to Perform Delete Operation
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+</div>
+
+<div class="card-group">
+    <div class="card">
+        <div class="card-header">Select</div>
+    </div>
+    <div class="card" *ngIf="chkName==true">
+        <div class="card-header" >Product Name</div>
+    </div>
+    <div class="card" *ngIf="chkdescription==true">
+        <div class="card-header">Description</div>
+    </div>
+    <div class="card" *ngIf="chkmanufacturer==true">
+        <div class="card-header">Manufacturer</div>
+    </div>
+    <div class="card" *ngIf="chkprice==true">
+        <div class="card-header">Price</div>
+    </div>
+    <div class="card" *ngIf="chkquantity==true">
+        <div class="card-header">Quantity</div>
+    </div>
+</div>
+
+<div class="card-group" *ngFor="let product of products | productsFilter : Filter ">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-check-inline">
+                <label class="form-check-label" for="check1">
+                    <input type="checkbox" class="form-check-input" id="check1" name="checkbox" value={{product.id}} (change)="changeSelectedList(product.id)">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="card" *ngIf="chkName==true" >
+        <a class="card-body" [routerLink]="['/productDetail', product.id]">{{product.productName}}</a>
+    </div>
+    <div class="card" *ngIf="chkdescription==true">
+        <div class="card-body">{{product.productDescription}}</div>
+    </div>
+    <div class="card" *ngIf="chkmanufacturer==true">
+        <div class="card-body">{{product.manufacturer}}</div>
+    </div>
+    <div class="card" *ngIf="chkprice==true">
+        <div class="card-body">{{product.price}}</div>
+    </div>
+    <div class="card" *ngIf="chkquantity==true">
+        <div class="card-body">{{product.quantity}}</div>
+    </div>
+</div>

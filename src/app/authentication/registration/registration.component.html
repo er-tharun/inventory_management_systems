@@ -1,0 +1,68 @@
+<h3 class="text-center" id="title">User Registration</h3>
+<!--<div class="text-center">
+  <div class="button-group">
+    <button style="padding-right: 20px;" type="submit" class="btn btn-outline-success" routerLink="login">Log-In</button>  
+      <button style="padding-right: 20px;" type="submit" class="btn btn-outline-success" routerLink="registrationDetails">Registered Users Summary</button>
+  </div>
+</div>-->
+<br>
+
+<div >
+
+</div>
+          <div class="alert alert-success" *ngIf="registrationSuccessMessage!=null" role="alert">
+            {{registrationSuccessMessage}}
+          </div>
+            <form #addUserForm="ngForm" (ngSubmit)="addUser(addUserForm)">
+                <input name="id" hidden="true" [(ngModel)]="userData.id">
+                <div class="mb-3">
+                  <label for="inputEmail1" id="inputEmailJ" class="form-label">Email address</label>
+                  <input type="email" name="email" [(ngModel)]="userData.email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                  [ngClass]="{ 'is-invalid': addUserForm.submitted && email.invalid}" required #email="ngModel">
+                  <div *ngIf="addUserForm.submitted && email.invalid" class="invalid-feedback">
+                    <div *ngIf="email.errors.required">Email is required</div>
+                </div>
+                </div>
+                <div class="mb-3">
+                  <label for="inputPassword1" id="inputPasswordJ" class="form-label">Password</label>
+                  <input type="password" name="password" [(ngModel)]="userData.password"  class="form-control" id="inputPassword"
+                  [ngClass]="{ 'is-invalid': addUserForm.submitted && pass.invalid}" required #pass="ngModel">
+                  <div *ngIf="addUserForm.submitted && pass.invalid" class="invalid-feedback">
+                    <div *ngIf="pass.errors.required">Password is required</div>
+                </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputFirstName" id="inputFirstNameJ" class="form-label">First Name</label>
+                    <input type="text" name="firstName" [(ngModel)]="userData.firstName"  class="form-control" id="inputFirstName"
+                    [ngClass]="{ 'is-invalid': addUserForm.submitted && fname.invalid}" required #fname="ngModel">
+                    <div *ngIf="addUserForm.submitted && fname.invalid" class="invalid-feedback">
+                      <div *ngIf="fname.errors.required">First Name is required</div>
+                  </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputLastName" id="inputLastNameJ" class="form-label">Last Name</label>
+                    <input type="text" name="lastName" [(ngModel)]="userData.lastName"  class="form-control" id="inputLastName"
+                    [ngClass]="{ 'is-invalid': addUserForm.submitted && lname.invalid}" required #lname="ngModel">
+                    <div *ngIf="addUserForm.submitted && lname.invalid" class="invalid-feedback">
+                      <div *ngIf="lname.errors.required">Last Name is required</div>
+                  </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputLocation" id="inputLocationJ" class="form-label">Location</label>
+                    <input type="text" name="location" [(ngModel)]="userData.location"  class="form-control" id="inputLocation"
+                    [ngClass]="{ 'is-invalid': addUserForm.submitted && loca.invalid}" required #loca="ngModel">
+                    <div *ngIf="addUserForm.submitted && loca.invalid" class="invalid-feedback">
+                      <div *ngIf="loca.errors.required">Location is required</div>
+                  </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputMobileNumber" id="inputMobileNumberJ" class="form-label">Mobile Number</label>
+                    <input type="text" name="mobileNumber" [(ngModel)]="userData.mobileNumber"  class="form-control" id="inputMobileNumber"
+                    [ngClass]="{ 'is-invalid': addUserForm.submitted && mob.invalid}" required #mob="ngModel">
+                    <div *ngIf="addUserForm.submitted && mob.invalid" class="invalid-feedback">
+                      <div *ngIf="mob.errors.required">Mobile Number is required</div>
+                  </div>
+                  </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+

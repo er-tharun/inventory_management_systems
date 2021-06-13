@@ -1,0 +1,35 @@
+<div class="card-group">
+  <div class="card">
+    <div class="card-header">Email</div>
+  </div>
+  <div class="card">
+    <div class="card-header">FirstName</div>
+  </div>
+  <div class="card">
+    <div class="card-header">LastName</div>
+  </div>
+  <div class="card">
+    <div class="card-header">Location</div>
+  </div>
+  <div class="card">
+    <div class="card-header">Mobile Number</div>
+  </div>
+</div>
+
+<div class="card-group" *ngFor="let user of users">
+  <div class="card">
+    <div class="card-body">{{user.email}}</div>
+  </div>
+  <div class="card">
+    <div class="card-body">{{user.firstName}}</div>
+  </div>
+  <div class="card">
+    <div class="card-body">{{user.lastName}}</div>
+  </div>
+  <div class="card">
+    <div class="card-body">{{user.location}}</div>
+  </div>
+  <div class="card">
+    <div class="card-body">{{user.mobileNumber}}</div>
+  </div>
+</div>

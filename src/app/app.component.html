@@ -1,0 +1,57 @@
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6eb9ee;">
+  <a class="navbar-brand" href="#">Product Inventory Management System</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" id="navItem_about" routerLink='' routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a>
+      <a class="nav-item nav-link" id="navItem_productSummary" routerLink='productSummary' routerLinkActive="active-link">Product Summary</a>
+      <a class="nav-item nav-link" *ngIf="val == null" id="navItem" routerLink='registration' routerLinkActive="active-link" style="float: right;">Log-In</a>
+      <a class="nav-item nav-link" *ngIf="val!=null" id="navItem" style="float: right;">Logged-In as : {{val}}</a>
+      <a class="nav-item nav-link" *ngIf="val!=null" id="navItem" routerLink='registration' routerLinkActive="active-link" style="float: right;" (click)="changeToLoginRoute()">Log-Out</a>
+    </div>
+  </div>
+</nav>
+
+<!--NavBar
+<nav class="navbar navbar-default" id="theme">
+  <div class="col-sm-2 sidenav">
+  </div>
+  <div class="container-fluid col-sm-8">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" id="fontColor">Product Inventory Management System</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" id="fontColor" id="navItem_about" routerLink='' routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a></li>
+        <li><a href="#" id="fontColor"id="navItem_productSummary" routerLink='productSummary' routerLinkActive="active-link">Product Summary</a></li>
+        <li><a href="#" id="fontColor"*ngIf="isUserLogged==false" id="navItem" routerLink='registration' routerLinkActive="active-link" style="float: right;">Log-In</a></li>
+        <li><a href="#" id="fontColor"*ngIf="isUserLogged==true" id="navItem" routerLink='registration' routerLinkActive="active-link" style="float: right;" (click)="changeToLoginRoute()">Log-Out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-2 sidenav">
+  </div>
+</nav>-->
+
+<router-outlet class="container-fluid body-content"></router-outlet>
+
+<br/>
+<!--footer-->
+<footer class="container-fluid" style="background-color: #6eb9ee;">
+    <p class="col-sm-10 foot" id="fontColor"> eNno Theme. All Rights Reserved<br />Designed by BootstrapMade.</p>
+    <!--<p class="col-sm-2 left text-right" id="fontColor"> <br />
+      <a href="#" class="fa fa-facebook" id="fontColor"></a>
+      <a href="#" class="fa fa-twitter" id="fontColor"></a>
+      <a href="#" class="fa fa-linkedin" id="fontColor"></a>
+      <a href="#" class="fa fa-pinterest" id="fontColor"></a>
+      <a href="#" class="fa fa-google" id="fontColor"></a>
+    </p>-->
+</footer>

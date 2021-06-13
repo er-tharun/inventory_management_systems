@@ -1,0 +1,16 @@
+<br>
+<div class="text-center">
+    <button class="center btn btn-primary" (click)="goBack()">Go Back</button>
+</div>
+
+<div style="display: block;">
+    <canvas baseChart height="40vh" width="80vw" 
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  </div>
+
